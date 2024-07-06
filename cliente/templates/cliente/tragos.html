@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  {% load static %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Al Fondo Bar</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="{% static 'cliente/css/style.css' %}">
 </head>
 <body>
-  <!-- Barra de navegacion-->
+  <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Al Fondo Bar</a>
+      <a class="navbar-brand" href="{% url 'index' %}">Al Fondo Bar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="./entrada.html">Entrada</a>
+            <a class="nav-link" aria-current="page" href="{% url 'entrada' %}">Entrada</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="./cocteles.html">Cocteles</a>
+            <a class="nav-link" href="{% url 'cocteles' %}">Cocteles</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./tragos.html">Tragos</a>
+            <a class="nav-link" href="{% url 'tragos' %}">Tragos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./pizza.html">Pizza</a>
+            <a class="nav-link" href="{% url 'pizza' %}">Pizza</a>
           </li>
         </ul>
-        <a class="btn btn-secondary text-white fw-bold mx-lg-2 my-2 btn-pedido" href="./form.html">
+        <a class="btn btn-secondary text-white fw-bold mx-lg-2 my-2 btn-pedido" href="{% url 'form' %}">
           Pedido
         </a>
         <form class="d-flex" role="search">
@@ -45,15 +46,13 @@
   <div class="container py-5 text-align-center">
     <div class="row row-gap-3 justify-content-center">
       <!-- Tarjetas Tragos -->
-      <div class="container py-5 text-align-center">
-    <div class="row row-gap-3 justify-content-center">
       <div class="col-12 col-sm-4 col-md-3 col-lg-3">
         <div class="card shadow">
-          <div class="img-card-wallpaper" style="background-image: url(./assets/img/clavo-oxidado.jpg);"></div>
+          <div class="img-card-wallpaper" style="background-image: url({% static 'cliente/img/clavo-oxidado.jpg' %});"></div>
           <div class="card-body">
-            <h5 class="titulo">clavo oxidado</h5>
+            <h5 class="titulo">Clavo Oxidado</h5>
             <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-1">
-              Ver mas detalles
+              Ver más detalles
             </button>
           </div>
         </div>
@@ -61,11 +60,11 @@
       <br>
       <div class="col-12 col-sm-4 col-md-3 col-lg-3">
         <div class="card shadow">
-          <div class="img-card-wallpaper" style="background-image: url(./assets/img/whisky-sour.jpg);"></div>
+          <div class="img-card-wallpaper" style="background-image: url({% static 'cliente/img/whisky-sour.jpg' %});"></div>
           <div class="card-body">
             <h5 class="titulo">Whisky Sour</h5>
             <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-2">
-              Ver mas detalles
+              Ver más detalles
             </button>
           </div>
         </div>
@@ -73,11 +72,11 @@
       <br>
       <div class="col-12 col-sm-4 col-md-3 col-lg-3">
         <div class="card shadow">
-          <div class="img-card-wallpaper" style="background-image: url(./assets/img/ramazzotti.jpg);"></div>
+          <div class="img-card-wallpaper" style="background-image: url({% static 'cliente/img/ramazzotti.jpg' %});"></div>
           <div class="card-body">
             <h5 class="titulo">Ramazzotti</h5>
             <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-3">
-              Ver mas detalles
+              Ver más detalles
             </button>
           </div>
         </div>
@@ -85,11 +84,11 @@
       <br>
       <div class="col-12 col-sm-4 col-md-3 col-lg-3">
         <div class="card shadow">
-          <div class="img-card-wallpaper" style="background-image: url(./assets/img/pantera-rosa.jpg);"></div>
+          <div class="img-card-wallpaper" style="background-image: url({% static 'cliente/img/pantera-rosa.jpg' %});"></div>
           <div class="card-body">
             <h5 class="titulo">Pantera Rosa</h5>
             <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-4">
-              Ver mas detalles
+              Ver más detalles
             </button>
           </div>
         </div>
@@ -97,11 +96,11 @@
       <br>
       <div class="col-12 col-sm-4 col-md-3 col-lg-3">
         <div class="card shadow">
-          <div class="img-card-wallpaper" style="background-image: url(./assets/img/tom-collins.jpg);"></div>
+          <div class="img-card-wallpaper" style="background-image: url({% static 'cliente/img/tom-collins.jpg' %});"></div>
           <div class="card-body">
-            <h5 class="titulo">Tom collins</h5>
+            <h5 class="titulo">Tom Collins</h5>
             <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-5">
-              Ver mas detalles
+              Ver más detalles
             </button>
           </div>
         </div>
@@ -109,23 +108,23 @@
       <br>
       <div class="col-12 col-sm-4 col-md-3 col-lg-3">
         <div class="card shadow">
-          <div class="img-card-wallpaper" style="background-image: url(./assets/img/tragos1.png);"></div>
+          <div class="img-card-wallpaper" style="background-image: url({% static 'cliente/img/tragos1.png' %});"></div>
           <div class="card-body">
             <h5 class="titulo">Old Fashion</h5>
             <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-6">
-              Ver mas detalles
+              Ver más detalles
             </button>
           </div>
         </div>
       </div>
     </div>
-    <!-- Modal Tragos-->
-    <div class="modal" id="modal-1" data-bs-backdrop="static" >
+    <!-- Modal Tragos -->
+    <div class="modal" id="modal-1" data-bs-backdrop="static">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h4 class="modal-title">Clavo Oxidado</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" ></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
           <div class="modal-body">
             <p id="contenedor">Drambuie, whisky y marrasquino</p>
@@ -138,7 +137,7 @@
         </div>
       </div>
     </div>
-    <div class="modal" id="modal-2" data-bs-backdrop="static" >
+    <div class="modal" id="modal-2" data-bs-backdrop="static">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -146,7 +145,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p id="contenedor">Zumo de limon, albumina, whisky.</p>
+            <p id="contenedor">Zumo de limón, albúmina, whisky</p>
           </div>
           <div class="modal-footer">
             <h5 class="titulo">4.900</h5>
@@ -156,7 +155,7 @@
         </div>
       </div>
     </div>
-    <div class="modal" id="modal-3" data-bs-backdrop="static" >
+    <div class="modal" id="modal-3" data-bs-backdrop="static">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -164,7 +163,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p id="contenedor">Champangne, ramazzotti, tonica, arandano.</p>
+            <p id="contenedor">Champagne, ramazzotti, tónica, arándano</p>
           </div>
           <div class="modal-footer">
             <h5 class="titulo">5.900</h5>
@@ -174,7 +173,7 @@
         </div>
       </div>
     </div>
-    <div class="modal" id="modal-4" data-bs-backdrop="static" >
+    <div class="modal" id="modal-4" data-bs-backdrop="static">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -182,7 +181,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p id="contenedor">Pisco, Crema de leche, jugo de piña, jugo de frutilla, azucar glass.</p>
+            <p id="contenedor">Pisco, crema de leche, jugo de piña, jugo de frutilla, azúcar glass</p>
           </div>
           <div class="modal-footer">
             <h5 class="titulo">4.900</h5>
@@ -192,7 +191,7 @@
         </div>
       </div>
     </div>
-    <div class="modal" id="modal-5" data-bs-backdrop="static" >
+    <div class="modal" id="modal-5" data-bs-backdrop="static">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -200,7 +199,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p id="contenedor">Gin, zumo de limon, agua gasificada, marrasquino, azucar.</p>
+            <p id="contenedor">Gin, zumo de limón, agua gasificada, marrasquino, azúcar</p>
           </div>
           <div class="modal-footer">
             <h5 class="titulo">5.500</h5>
@@ -210,7 +209,7 @@
         </div>
       </div>
     </div>
-    <div class="modal" id="modal-6" data-bs-backdrop="static" >
+    <div class="modal" id="modal-6" data-bs-backdrop="static">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -218,7 +217,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p id="contenedor">Whisky, marrasquino, azucar morena, biter angostura, piel de naranja.</p>
+            <p id="contenedor">Whisky, marrasquino, azúcar morena, bitter angostura, piel de naranja</p>
           </div>
           <div class="modal-footer">
             <h5 class="titulo">4.900</h5>
@@ -229,8 +228,7 @@
       </div>
     </div>
   </div>
-
     
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>    
 </body>
 </html>

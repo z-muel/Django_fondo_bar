@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Mi Aplicación{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'index' %}">Mi Aplicación</a></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'categoria-list' %}">Categorías</a></li>
+            <li><a href="{% url 'producto-list' %}">Productos</a></li>
+            <li><a href="{% url 'mesa-list' %}">Mesas</a></li>
+            <li><a href="{% url 'cliente-list' %}">Clientes</a></li>
+            <li><a href="{% url 'pedido-list' %}">Pedidos</a></li>
+            <li><a href="{% url 'detallepedido-list' %}">Detalles de Pedidos</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

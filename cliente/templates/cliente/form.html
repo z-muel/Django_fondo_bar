@@ -2,18 +2,19 @@
 <html lang="es">
 
 <head>
+  {% load static %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Al Fondo Bar</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="{% static 'cliente/css/style.css' %}">
 </head>
 
 <body>
   <!-- Barra de navegacion -->
   <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Al Fondo Bar</a>
+      <a class="navbar-brand" href="{% url 'index' %}">Al Fondo Bar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -21,19 +22,19 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="entrada.html">Entrada</a>
+            <a class="nav-link" aria-current="page" href="{% url 'entrada' %}">Entrada</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="./cocteles.html">Cocteles</a>
+            <a class="nav-link" href="{% url 'cocteles' %}">Cocteles</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./tragos.html">Tragos</a>
+            <a class="nav-link" href="{% url 'tragos' %}">Tragos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./pizza.html">Pizza</a>
+            <a class="nav-link" href="{% url 'pizza' %}">Pizza</a>
           </li>
         </ul>
-        <a class="btn btn-secondary text-white fw-bold mx-lg-2 my-2 btn-pedido" href="./form.html">
+        <a class="btn btn-secondary text-white fw-bold mx-lg-2 my-2 btn-pedido" href="{% url 'form' %}">
           Pedido
         </a>
         <form class="d-flex" role="search">
@@ -52,39 +53,31 @@
         <label for="nombre" class="form-label">Nombre</label>
         <input type="text" class="form-control" id="nombre" aria-describedby="nombre" placeholder="Ingrese su Nombre" required>
         <div class="valid-feedback">Todo bien</div>
-
         <div class="invalid-feedback">Es necesario ingresar el nombre</div>
-
       </div>
 
       <div class="mb-3">
-        <label for="email" class="form-label">Correo electronico</label>
-        <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Ingrese su Correo Electronico" required>
+        <label for="email" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Ingrese su Correo Electrónico" required>
         <div id="email-validate" class="form-text"></div>
         <div class="valid-feedback">Todo bien</div>
-
-        <div class="invalid-feedback">Es necesario ingresar el Correo electronico</div>
-
-
+        <div class="invalid-feedback">Es necesario ingresar el correo electrónico</div>
       </div>
 
       <div class="mb-3">
-        <label for="nummesa" class="form-label">Numero de mesa:</label>
-        <input type="number" class="form-control" id="nummesa" aria-describedby="nummesa" placeholder="Ingrese su Numero de Mesa" required>
+        <label for="nummesa" class="form-label">Número de mesa</label>
+        <input type="number" class="form-control" id="nummesa" aria-describedby="nummesa" placeholder="Ingrese su Número de Mesa" required>
         <div class="valid-feedback">Todo bien</div>
-
-        <div class="invalid-feedback">Es necesario ingresar el Numero de mesa</div>
+        <div class="invalid-feedback">Es necesario ingresar el número de mesa</div>
       </div>
 
       <div class="mb-3">
         <label for="description" class="form-label">Descripción</label>
-        <textarea class="form-control" id="description" rows="3" placeholder="Si desea agregar algo o modificar un pedido Aqui" required></textarea>
+        <textarea class="form-control" id="description" rows="3" placeholder="Si desea agregar algo o modificar un pedido aquí" required></textarea>
       </div>
 
       <fieldset class="row mb-3">
-
-        <legend class="col-form-label col-sm-4 pt-0">Metodo de Pago:</legend>
-
+        <legend class="col-form-label col-sm-4 pt-0">Método de Pago:</legend>
         <div class="col-sm-8">
           <div class="form-check">
             <input class="form-check-input" type="radio" name="gridRadios" id="efectivo" required>
@@ -107,7 +100,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
-    <script src="./assets/js/form.js"></script>
+  <script src="{% static 'cliente/js/form.js' %}"></script>
 </body>
 
 </html>

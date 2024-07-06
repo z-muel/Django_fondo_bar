@@ -25,4 +25,3 @@ class PedidoAdmin(admin.ModelAdmin):
 @admin.register(DetallePedido)
 class DetallePedidoAdmin(admin.ModelAdmin):
     list_display = ('pedido', 'producto', 'cantidad', 'precio')
-
