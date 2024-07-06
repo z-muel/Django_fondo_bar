@@ -1,37 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Categoria, Producto, Mesa, Cliente, Pedido, DetallePedido
 from django.views.generic.edit import CreateView
-from django.contrib.auth import authenticate, login
-from .forms import ClienteRegistrationForm, PersonalRestauranteRegistrationForm
-
-class ClienteRegistrationView(CreateView):
-    template_name = 'cliente/cliente_registration.html'
-    form_class = ClienteRegistrationForm
-    success_url = reverse_lazy('cliente-list')  # URL a la que se redirige después del registro exitoso
-
-    def form_valid(self, form):
-        user = form.save()
-        username = form.cleaned_data.get('username')
-        raw_password = form.cleaned_data.get('password1')
-        user = authenticate(username=username, password=raw_password)
-        login(self.request, user)
-        return redirect(self.success_url)
-
-class PersonalRestauranteRegistrationView(CreateView):
-    template_name = 'cliente/personal_restaurante_registration.html'
-    form_class = PersonalRestauranteRegistrationForm
-    success_url = reverse_lazy('personal-restaurante-list')  # URL a la que se redirige después del registro exitoso
-
-    def form_valid(self, form):
-        user = form.save()
-        username = form.cleaned_data.get('username')
-        raw_password = form.cleaned_data.get('password1')
-        user = authenticate(username=username, password=raw_password)
-        login(self.request, user)
-        return redirect(self.success_url)
-
 
 
 # Vista para la página de inicio

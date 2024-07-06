@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'cliente',
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -100,7 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'cliente.Clientes'  # O 'cliente.PersonalRestaurante' según corresponda
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/

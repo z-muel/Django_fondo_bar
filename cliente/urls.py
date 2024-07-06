@@ -7,14 +7,11 @@
 
 from django.urls import path
 from . import views
-from .views import ClienteRegistrationView, PersonalRestauranteRegistrationView
+
 
 urlpatterns = [
     path('', views.index, name='index'),
 
-    path('registro/cliente/', ClienteRegistrationView.as_view(), name='cliente-registration'),
-    path('registro/personal-restaurante/', PersonalRestauranteRegistrationView.as_view(), name='personal-restaurante-registration'),
-    
     # URLs para Categoria
     path('categorias/', views.CategoriaListView.as_view(), name='categoria-list'),
     path('categorias/new/', views.CategoriaCreateView.as_view(), name='categoria-create'),
