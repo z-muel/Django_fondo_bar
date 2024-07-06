@@ -24,6 +24,9 @@ def pizza(request):
 def form(request):
     return render(request, 'cliente/form.html')
 
+def pedido(request):
+    return render(request, 'cliente/pedido.html')
+
 # Vistas para Categoria
 class CategoriaListView(ListView):
     model = Categoria

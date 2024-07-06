@@ -16,6 +16,7 @@ urlpatterns = [
     path('tragos/', views.tragos, name='tragos'),
     path('pizza/', views.pizza, name='pizza'),
     path('form/', views.form, name='form'),
+    path('pedido/', views.pedido, name='pedido'),
 
     # URLs para Categoria
     path('categorias/', views.CategoriaListView.as_view(), name='categoria-list'),
