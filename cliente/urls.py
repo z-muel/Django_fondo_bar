@@ -11,6 +11,11 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('entrada/', views.entrada, name='entrada'),
+    path('cocteles/', views.cocteles, name='cocteles'),
+    path('tragos/', views.tragos, name='tragos'),
+    path('pizza/', views.pizza, name='pizza'),
+    path('form/', views.form, name='form'),
 
     # URLs para Categoria
     path('categorias/', views.CategoriaListView.as_view(), name='categoria-list'),

@@ -9,6 +9,21 @@ from django.views.generic.edit import CreateView
 def index(request):
     return render(request, 'cliente/index.html')
 
+def entrada(request):
+    return render(request, 'cliente/entrada.html')
+
+def cocteles(request):
+    return render(request, 'cliente/cocteles.html')
+
+def tragos(request):
+    return render(request, 'cliente/tragos.html')
+
+def pizza(request):
+    return render(request, 'cliente/pizza.html')
+
+def form(request):
+    return render(request, 'cliente/form.html')
+
 # Vistas para Categoria
 class CategoriaListView(ListView):
     model = Categoria
