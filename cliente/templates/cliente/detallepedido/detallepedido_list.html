@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Lista de Detalles de Pedidos</h1>
+  <ul>
+    {% for detalle in object_list %}
+      <li>
+        <a href="{% url 'detallepedido-update' detalle.pk %}">{{ detalle.cantidad }} x {{ detalle.producto.nombre }}</a>
+        <form action="{% url 'detallepedido-delete' detalle.pk %}" method="post" style="display:inline;">
+          {% csrf_token %}
+          <input type="submit" value="Eliminar">
+        </form>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'detallepedido-create' %}">Crear nuevo detalle de pedido</a>
+{% endblock %}
