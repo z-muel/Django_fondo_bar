@@ -18,6 +18,8 @@ urlpatterns = [
     path('form/', views.form, name='form'),
     path('pedido/', views.pedido, name='pedido'),
 
+
+
     # URLs para Categoria
     path('categorias/', views.CategoriaListView.as_view(), name='categoria-list'),
     path('categorias/new/', views.CategoriaCreateView.as_view(), name='categoria-create'),
